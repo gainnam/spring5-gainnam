@@ -12,7 +12,11 @@
 .btn_snsLogin {width:190px;}
 }
 </style>
-
+<script>
+if("${naver_msg}" == "fail"){
+	alert("로그인에 실패했습니다.");
+}
+</script>
 <script>
 if('${param.msg}' == "fail"){
 	alert('로그인에 실패했습니다.! 이유는 ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}');
