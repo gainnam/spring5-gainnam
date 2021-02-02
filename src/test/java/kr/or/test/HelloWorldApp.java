@@ -1,0 +1,27 @@
+package kr.or.test;
+
+public class HelloWorldApp {
+
+	private static final int MemberVO = 0;
+	public static void main(String[] args) {
+		// 위 main()메서드는 자바프로그램의 실행 진입지점 입니다.
+		System.out.println("헬로우 월드!");
+		MemberVO memberVO = new MemberVO();
+		sumFunc(MemberVO, 4);//플러스함수를 실행할 때 매개변수 값을 줍니다.
+		sumFunc(3,4);
+		//매서드의 특징, 위와 같이 같은메서드명 로드된 매개변수가 다른 방식 오버로드된 메서드라고 합니다.
+		String testNull = null;
+		String testEmpty = "";
+		System.out.println("null출력-" + testNull  + "\t" + "empty출력-" + testEmpty);
+		//System.out.println("isEmpty메서드 값 출력-" + testNull.isEmpty());
+		System.out.println("isEmpty메서드 공백 값 출력" + testEmpty.isEmpty());
+	}
+
+		//메서드의 매개변수에 대해서 
+	public static void plusFunc(int a, int b) {
+		System.out.println("매개변수 a + b = " + (a+b) + "입니다.");
+	}
+	public static void sumFunc(int a, int b) {
+		System.out.println("매개변수 a + b =" +(a+b) + "입니다.");
+	}
+}
